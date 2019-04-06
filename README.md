@@ -30,24 +30,24 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. What is the purpose of using _sessions_?
 
-Sessions makes it so that you do not have to repeatedly verify your autherization status. It allows the user to remain logged in or verified for a certain level of authorization for a specified amount of time or until the user terminates the session and ends authorization.
+  Sessions makes it so that you do not have to repeatedly verify your autherization status. It allows the user to remain logged in or verified for a certain level of authorization for a specified amount of time or until the user terminates the session and ends authorization.
 
-1. What does bcrypt do to help us store passwords in a secure manner.
+2. What does bcrypt do to help us store passwords in a secure manner.
 
-bcrypt creates a one way encryption that is stored locally and can be verified in the server.
+  bcrypt creates a one way encryption that is stored locally and can be verified in the server.
 
-1. What does bcrypt do to slow down attackers?
+3. What does bcrypt do to slow down attackers?
 
-bcrypt can repeatedly hash private information making it much harder for attachers to gain access to valuable information.
+  bcrypt can repeatedly hash private information making it much harder for attachers to gain access to valuable information.
 
-1. What are the three parts of the JSON Web Token?
+4. What are the three parts of the JSON Web Token?
 
-JSON Web Tokens have three parts:
-The header: holds the algorithm and token type.
+  JSON Web Tokens have three parts:
+  The header: holds the algorithm and token type.
 
-The payload: holds the important information that will be stored in the token like ID and username.
+  The payload: holds the important information that will be stored in the token like ID and username.
 
-The signature: hoids a special verification string that consists of encrypted information from the header and payload. That string is then sealed with a secret for extra security and further identification.
+  The signature: hoids a special verification string that consists of encrypted information from the header and payload. That string is then sealed with a secret for extra security and further identification.
 
 ## Project Set Up
 
