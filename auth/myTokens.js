@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
 
+const secrets = require('./authenticate.js');
+
 module.exports = {
   generateToken,
 };
@@ -14,5 +16,5 @@ function generateToken(user) {
     expiresIn: '1d',
   };
 
-  return jwt.sign(payload, secrets, options);
+  return jwt.sign(payload, secrets.jwtKey, options);
 };

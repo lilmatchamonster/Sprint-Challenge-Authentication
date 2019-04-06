@@ -24,12 +24,13 @@ function register(req, res) {
     .catch(error => {
       res.status(500).json(error);
     });
-}
+};
 
 function login(req, res) {
   // implement user login
   const { username, password } = req.body;
   Users.findBy({ username })
+    .first()
     .then( user => {
       if(user && bcrypt.compareSync(password, user.password)) {
         const token = myTokens.generateToken(user);
@@ -43,7 +44,7 @@ function login(req, res) {
     .catch(error => {
       res.status(500).json(error);
     });
-}
+};
 
 function getJokes(req, res) {
   const requestOptions = {
@@ -58,4 +59,4 @@ function getJokes(req, res) {
     .catch(err => {
       res.status(500).json({ message: 'Error Fetching Jokes', error: err });
     });
-}
+};
